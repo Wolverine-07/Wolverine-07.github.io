@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-buttons">
+                    <a href="about.html"><button class="nav-button">About Me</button></a>
+                    <a href="birthplace.html"><button class="nav-button">Birthplace</button></a>
+                    <a href="hobbies.html"><button class="nav-button">Hobbies</button></a>
+                    <a href="education.html"><button class="nav-button">Education</button></a>
+                    <a href="technical-skills.html"><button class="nav-button">Technical Skills</button></a>
+                    <a href="cv.html"><button class="nav-button active">CV</button></a>
+                    <a href="text-analysis.html"><button class="nav-button">Text Analysis</button></a>
+                </div>
+                
+                <div class="theme-toggle">
+                    <span class="theme-toggle-label">Theme</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- CV Section -->
+        <div class="content-section">
+            <div class="profile-section">
+                <h1>Curriculum Vitae</h1>
+                <div class="about-text">
+                    <p>
+                        My comprehensive curriculum vitae highlights my professional journey, accomplishments, and expertise. It provides a detailed overview of my career path and qualifications.
+                    </p>
+                    
+                    <div class="cv-preview-container" style="margin: 25px 0; text-align: center;">
+                        <img src="../assets/cv-preview.png" alt="CV Preview" style="max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 5px; box-shadow: var(--card-shadow); max-height: 400px;">
+                    </div>
+                    
+                    <div class="cv-sections" style="background: var(--hover-bg); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <h3 style="margin-bottom: 15px; color: var(--accent-primary);">What's Inside My CV?</h3>
+                        <ul style="margin-left: 20px; list-style-type: none;">
+                            <li style="margin-bottom: 10px; position: relative; padding-left: 25px;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                <strong>Personal Profile:</strong> A concise introduction highlighting my career objectives and professional philosophy
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; padding-left: 25px;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                <strong>Contact Information:</strong> Professional contact details for networking opportunities
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; padding-left: 25px;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                <strong>Technical Skills:</strong> Comprehensive list of technical competencies and specialized certifications
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; padding-left: 25px;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                <strong>Language Proficiency:</strong> Details of languages I speak with proficiency levels
+                            </li>
+                            <li style="margin-bottom: 10px; position: relative; padding-left: 25px;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">✓</span>
+                                <strong>Educational Background:</strong> Academic qualifications with relevant coursework and achievements
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="../assets/My CV.pdf" class="download-btn" download style="padding: 15px 30px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download Complete CV (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 | Designed with ❤️ by Prashant Vinod</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/analytics.js"></script>
+    <script src="../js/text-analysis.js"></script>
+</body>
+</html>

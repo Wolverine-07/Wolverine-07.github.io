@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .hobby-card {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 380px;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hobby-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .hobby-card:hover .hobby-image {
+            transform: scale(1.05);
+        }
+        
+        .hobby-content {
+            padding: 20px;
+            position: relative;
+        }
+        
+        .hobby-icon {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hobby-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .hobby-quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-primary);
+        }
+        
+        .hobby-description {
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .hobby-frequency {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--hover-bg);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            color: var(--accent-primary);
+        }
+        
+        .quote-section {
+            background-color: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            position: relative;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .quote-mark {
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--accent-primary);
+            opacity: 0.3;
+        }
+        
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+        
+        .quote-author {
+            font-weight: 600;
+            text-align: right;
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-buttons">
+                    <a href="about.html"><button class="nav-button">About Me</button></a>
+                    <a href="birthplace.html"><button class="nav-button">Birthplace</button></a>
+                    <a href="hobbies.html"><button class="nav-button active">Hobbies</button></a>
+                    <a href="education.html"><button class="nav-button">Education</button></a>
+                    <a href="technical-skills.html"><button class="nav-button">Technical Skills</button></a>
+                    <a href="cv.html"><button class="nav-button">CV</button></a>
+                    <a href="text-analysis.html"><button class="nav-button">Text Analysis</button></a>
+                </div>
+                
+                <div class="theme-toggle">
+                    <span class="theme-toggle-label">Theme</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hobbies Section -->
+        <div class="content-section">
+            <div class="profile-section">
+                <h1>My Hobbies & Interests</h1>
+                <p class="about-text">
+                    Beyond my professional work, I actively pursue several hobbies that help me maintain a balanced lifestyle, foster creativity, and enhance my personal growth. These activities bring joy to my life and often provide fresh perspectives that I can apply to my professional endeavors.
+                </p>
+                
+                <div class="quote-section">
+     
+                    <p class="quote-text">
+                        "The richest people in the world build networks; everyone else looks for work. Pursuing diverse interests isn't just about enjoyment—it's about expanding your world and creating unexpected connections"
+                        
+                    </p>
+                   
+                    <p class="quote-author">— Robert Kiyosaki</p>
+                </div>
+                
+                <div class="hobby-grid">
+                    <!-- Reading -->
+                    <div class="hobby-card">
+                        <img src="../assets/reading.png" alt="Reading" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Reading'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">📚</div>
+                            <h3 class="hobby-title">Reading</h3>
+                            <p class="hobby-quote">"A reader lives a thousand lives before he dies."</p>
+                            <p class="hobby-description">
+                                I'm an avid reader with particular interests in technology literature, psychological studies, and science fiction. Reading expands my knowledge and fuels my imagination.
+                            </p>
+                            <div class="hobby-frequency">Daily Practice</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hiking -->
+                    <div class="hobby-card">
+                        <img src="../assets/hiking.png" alt="Hiking" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Hiking'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">🏔️</div>
+                            <h3 class="hobby-title">Hiking & Exploration</h3>
+                            <p class="hobby-quote">"Of all the paths you take in life, make sure a few of them are dirt."</p>
+                            <p class="hobby-description">
+                                Exploring nature trails and hiking through diverse landscapes helps me disconnect from digital distractions and reconnect with the natural world.
+                            </p>
+                            <div class="hobby-frequency">Weekend Adventures</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photography -->
+                    <div class="hobby-card">
+                        <img src="../assets/photography.png" alt="Photography" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Photography'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">📷</div>
+                            <h3 class="hobby-title">Photography</h3>
+                            <p class="hobby-quote">"Photography is the story I fail to put into words."</p>
+                            <p class="hobby-description">
+                                I specialize in landscape and street photography, capturing moments and perspectives that tell stories about places and people.
+                            </p>
+                            <div class="hobby-frequency">Weekly Practice</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cooking -->
+                    <div class="hobby-card">
+                        <img src="../assets/cooking.png" alt="Cooking" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Cooking'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">🍳</div>
+                            <h3 class="hobby-title">Cooking</h3>
+                            <p class="hobby-quote">"Cooking is like love. It should be entered into with abandon or not at all."</p>
+                            <p class="hobby-description">
+                                I enjoy experimenting with international cuisines, adapting recipes, and hosting dinners where food becomes a medium for cultural exchange.
+                            </p>
+                            <div class="hobby-frequency">Several Times Weekly</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Learning Programming -->
+                    <div class="hobby-card">
+                        <img src="../assets/coding.png" alt="Learning Programming" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Programming'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">💻</div>
+                            <h3 class="hobby-title">Learning New Technologies</h3>
+                            <p class="hobby-quote">"Every accomplishment starts with the decision to try."</p>
+                            <p class="hobby-description">
+                                I dedicate time to learning new programming languages and frameworks, building personal projects that expand my technical repertoire.
+                            </p>
+                            <div class="hobby-frequency">Several Hours Weekly</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Board Games -->
+                    <div class="hobby-card">
+                        <img src="../assets/boardgames.png" alt="Board Games" class="hobby-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=Board+Games'">
+                        <div class="hobby-content">
+                            <div class="hobby-icon">🎲</div>
+                            <h3 class="hobby-title">Strategy Board Games</h3>
+                            <p class="hobby-quote">"Life is more fun if you play games."</p>
+                            <p class="hobby-description">
+                                I enjoy strategic board games that exercise critical thinking, planning, negotiation, and social interaction in a fun, competitive setting.
+                            </p>
+                            <div class="hobby-frequency">Monthly Game Nights</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text" style="margin-top: 40px;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 15px;">How My Hobbies Complement My Professional Life</h3>
+                    <p>
+                        These diverse interests provide valuable skills and perspectives that enhance my professional capabilities:
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Reading</strong> broadens my knowledge base and improves my communication skills</li>
+                        <li><strong>Hiking</strong> develops resilience and problem-solving in changing environments</li>
+                        <li><strong>Photography</strong> strengthens my attention to detail and visual communication abilities</li>
+                        <li><strong>Cooking</strong> enhances creativity and precision in following structured processes</li>
+                        <li><strong>Learning new technologies</strong> keeps me adaptable and forward-thinking</li>
+                        <li><strong>Board games</strong> improve strategic thinking, negotiation, and teamwork</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 | Designed with ❤️ by Prashant Vinod</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/analytics.js"></script>
+    <script src="../js/text-analysis.js"></script>
+</body>
+</html>

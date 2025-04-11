@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .education-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 100%;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: var(--accent-primary);
+            border: 4px solid var(--accent-secondary);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--bg-secondary);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--accent-primary);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent-primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .timeline-degree {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+        
+        .timeline-institution {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .timeline-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .achievement-badge {
+            display: inline-block;
+            background-color: var(--hover-bg);
+            color: var(--accent-primary);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin: 5px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .cert-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .cert-item {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border-left: 3px solid var(--accent-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .cert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        
+        .cert-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .cert-issuer {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-buttons">
+                    <a href="about.html"><button class="nav-button">About Me</button></a>
+                    <a href="birthplace.html"><button class="nav-button">Birthplace</button></a>
+                    <a href="hobbies.html"><button class="nav-button">Hobbies</button></a>
+                    <a href="education.html"><button class="nav-button active">Education</button></a>
+                    <a href="technical-skills.html"><button class="nav-button">Technical Skills</button></a>
+                    <a href="cv.html"><button class="nav-button">CV</button></a>
+                    <a href="text-analysis.html"><button class="nav-button">Text Analysis</button></a>
+                </div>
+                
+                <div class="theme-toggle">
+                    <span class="theme-toggle-label">Theme</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Education Section -->
+        <div class="content-section">
+            <div class="profile-section">
+                <h1>Educational Journey</h1>
+                <p class="about-text">
+                    My academic background has provided me with a strong foundation of knowledge and skills. Below is a timeline of my educational experiences and achievements.
+                </p>
+                
+                <div class="education-timeline">
+                    <!-- College Education -->
+                    <div class="timeline-container">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022-Present</div>
+                            <div class="timeline-degree">Bachelor of Technology</div>
+                            <div class="timeline-institution">International Institute of Information Technology</div>
+                            <p>Currently pursuing my undergraduate degree in Computer Science with a focus on software development, algorithms, and data structures.</p>
+                            
+                            <div class="timeline-details">
+                                <h4>Key Coursework:</h4>
+                                <ul>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>Object-Oriented Programming</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Computer Networks</li>
+                                    <li>Web Development</li>
+                                </ul>
+                                
+                                <h4 style="margin-top: 15px;">Activities & Involvement:</h4>
+                                <div>
+                                    <span class="achievement-badge">Coding Club Member</span>
+                                    <span class="achievement-badge">Hackathon Participant</span>
+                                    <span class="achievement-badge">Student Mentor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Higher Secondary -->
+                    <div class="timeline-container" style="margin-top: 30px;">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020-2022</div>
+                            <div class="timeline-degree">Class 11th to 12th (Higher Secondary)</div>
+                            <div class="timeline-institution">Emmanuel Mission School</div>
+                            <p>Completed my higher secondary education with focus on Science and Mathematics, building a solid foundation in core subjects.</p>
+                            
+                            <div class="timeline-details">
+                                <h4>Key Subjects:</h4>
+                                <ul>
+                                    <li>Physics</li>
+                                    <li>Chemistry</li>
+                                    <li>Mathematics</li>
+                                    <li>Computer Science</li>
+                                    <li>English</li>
+                                </ul>
+                                
+                                <h4 style="margin-top: 15px;">Achievements:</h4>
+                                <div>
+                                    <span class="achievement-badge">Grade: 92%</span>
+                                    <span class="achievement-badge">Science Olympiad Gold Medallist</span>
+                                    <span class="achievement-badge">School Captain</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Education -->
+                    <div class="timeline-container" style="margin-top: 30px;">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2017-2020</div>
+                            <div class="timeline-degree">Class 6th to 10th (Secondary Education)</div>
+                            <div class="timeline-institution">Sainik School Gopalganj</div>
+                            <p>Received a disciplined and comprehensive education at this prestigious residential school that focuses on academic excellence and character building.</p>
+                            
+                            <div class="timeline-details">
+                                <h4>Key Learning Areas:</h4>
+                                <ul>
+                                    <li>Science and Mathematics</li>
+                                    <li>Languages (English and Hindi)</li>
+                                    <li>Social Studies</li>
+                                    <li>Physical Training</li>
+                                    <li>Extra-curricular Activities</li>
+                                </ul>
+                                
+                                <h4 style="margin-top: 15px;">Achievements:</h4>
+                                <div>
+                                    <span class="achievement-badge">Grade: 98.6%</span>
+                                    <span class="achievement-badge">School Topper</span>
+                                    <span class="achievement-badge">NTSE Scholar</span>
+                                    <span class="achievement-badge">NCC Cadet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">Academic Projects</h2>
+                <p class="about-text">
+                    Throughout my academic journey, I've worked on various projects that have helped me apply theoretical knowledge to practical scenarios:
+                </p>
+                
+                <div class="cert-container">
+                    <div class="cert-item">
+                        <div class="cert-name">Personal Portfolio Website</div>
+                        <div class="cert-issuer">Web Development Course</div>
+                        <p style="margin-top: 10px;">Designed and implemented a responsive personal portfolio website using HTML, CSS, and JavaScript to showcase academic projects and skills.</p>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-name">Student Management System</div>
+                        <div class="cert-issuer">Database Management Course</div>
+                        <p style="margin-top: 10px;">Created a database application to manage student records, course registrations, and grade calculations using SQL and Java.</p>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-name">Data Structures Visualization Tool</div>
+                        <div class="cert-issuer">Algorithms Course</div>
+                        <p style="margin-top: 10px;">Developed an interactive tool to visualize common data structures and algorithms to help fellow students understand complex concepts.</p>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 40px; margin-bottom: 20px;">Online Courses & Self Learning</h2>
+                <p class="about-text">
+                    In addition to my formal education, I actively pursue online learning to expand my knowledge in areas of interest:
+                </p>
+                
+                <div class="online-courses-container" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 25px;">
+                    <div class="course-badge" style="flex: 1; min-width: 200px; background-color: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: center; box-shadow: var(--card-shadow); border-top: 4px solid #3498db; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 10px; color: #3498db;">📚</div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: var(--text-primary);">Introduction to Python Programming</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">Completed</div>
+                    </div>
+                    
+                    <div class="course-badge" style="flex: 1; min-width: 200px; background-color: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: center; box-shadow: var(--card-shadow); border-top: 4px solid #e74c3c; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 10px; color: #e74c3c;">💻</div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: var(--text-primary);">Web Development Bootcamp</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">In Progress</div>
+                    </div>
+                    
+                    <div class="course-badge" style="flex: 1; min-width: 200px; background-color: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: center; box-shadow: var(--card-shadow); border-top: 4px solid #2ecc71; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 10px; color: #2ecc71;">📊</div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: var(--text-primary);">Data Science Fundamentals</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">In Progress</div>
+                    </div>
+                    
+                    <div class="course-badge" style="flex: 1; min-width: 200px; background-color: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: center; box-shadow: var(--card-shadow); border-top: 4px solid #9b59b6; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 10px; color: #9b59b6;">🎨</div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: var(--text-primary);">UI/UX Design Principles</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">In Progress</div>
+                    </div>
+                    
+                    <div class="course-badge" style="flex: 1; min-width: 200px; background-color: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: center; box-shadow: var(--card-shadow); border-top: 4px solid #f39c12; transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 10px; color: #f39c12;">📱</div>
+                        <div style="font-weight: 600; margin-bottom: 5px; color: var(--text-primary);">Mobile App Development</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">In Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 | Designed with ❤️ by Prashant Vinod</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/analytics.js"></script>
+    <script src="../js/text-analysis.js"></script>
+    
+    <script>
+        // Add hover effects for course badges
+        document.addEventListener('DOMContentLoaded', function() {
+            const courseBadges = document.querySelectorAll('.course-badge');
+            
+            courseBadges.forEach(badge => {
+                badge.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+                });
+                
+                badge.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'var(--card-shadow)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

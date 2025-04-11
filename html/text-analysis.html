@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/text-analysis.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-buttons">
+                    <a href="about.html"><button class="nav-button">About Me</button></a>
+                    <a href="birthplace.html"><button class="nav-button">Birthplace</button></a>
+                    <a href="hobbies.html"><button class="nav-button">Hobbies</button></a>
+                    <a href="education.html"><button class="nav-button">Education</button></a>
+                    <a href="technical-skills.html"><button class="nav-button">Technical Skills</button></a>
+                    <a href="cv.html"><button class="nav-button">CV</button></a>
+                    <a href="text-analysis.html"><button class="nav-button active">Text Analysis</button></a>
+                </div>
+                
+                <div class="theme-toggle">
+                    <span class="theme-toggle-label">Theme</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider">
+                            <span class="sun">☀️</span>
+                            <span class="moon">🌙</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Text Analysis Section -->
+        <div class="content-section">
+            <div class="profile-section">
+                <h1>Text Analysis Tool</h1>
+                <p class="about-text">
+                    Enter text below (10000+ words recommended) to analyze its composition. This tool will identify various linguistic elements and provide detailed counts.
+                </p>
+                
+                <!-- Text Input Area -->
+                <textarea id="text-input" placeholder="Enter or paste text here (10000+ words recommended)..."></textarea>
+                
+                <div class="button-container">
+                    <button id="analyze-btn" class="download-btn">
+                        Analyze Text
+                    </button>
+                    
+                    <button id="reset-btn">
+                        Reset Analysis
+                    </button>
+                </div>
+                
+                <!-- Analysis Results Section -->
+                <div id="analysis-results">
+                    <h2>Analysis Results</h2>
+                    
+                    <!-- Basic Statistics Section -->
+                    <div class="analysis-section">
+                        <h3>Basic Statistics</h3>
+                        <div id="basic-stats"></div>
+                    </div>
+                    
+                    <!-- Pronouns Section -->
+                    <div class="analysis-section">
+                        <h3>Pronoun Count</h3>
+                        <div id="pronoun-stats"></div>
+                    </div>
+                    
+                    <!-- Prepositions Section -->
+                    <div class="analysis-section">
+                        <h3>Preposition Count</h3>
+                        <div id="preposition-stats"></div>
+                    </div>
+                    
+                    <!-- Indefinite Articles Section -->
+                    <div class="analysis-section">
+                        <h3>Indefinite Article Count</h3>
+                        <div id="article-stats"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 | Designed with ❤️ by Prashant Vinod</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/analytics.js"></script>
+    <script src="../js/text-analysis.js"></script>
+</body>
+</html>
