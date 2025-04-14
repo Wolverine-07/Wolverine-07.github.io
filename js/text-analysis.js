@@ -23,6 +23,29 @@ document.addEventListener('DOMContentLoaded', function() {
         resetBtn.addEventListener('click', resetAnalysis);
     }
     
+    // Add event listener to track actual Enter key presses
+    textInput.addEventListener('input', function() {
+        // This will update the analysis automatically as user types
+        if (resultsContainer.style.display === 'block') {
+            analyzeText();
+        }
+    });
+    
+    // Add a specific keydown listener to accurately track Enter key presses
+    textInput.addEventListener('keydown', function(event) {
+        // Only process Enter key presses
+        if (event.key === 'Enter') {
+            // We don't need to do anything special here since the newline character
+            // will be added to the text and captured by the input event
+            console.log('Enter key pressed - newline added');
+            
+            // Force an immediate analysis update when Enter is pressed
+            if (resultsContainer.style.display === 'block') {
+                setTimeout(analyzeText, 0); // Use timeout to ensure text is updated first
+            }
+        }
+    });
+    
     // Function to reset the analysis
     function resetAnalysis() {
         // Clear the text input
@@ -82,12 +105,17 @@ function calculateBasicStats(text) {
     // Count spaces correctly - all whitespace characters except newlines
     const spaces = (text.match(/[^\S\n]/g) || []).length;
     
-    // Count lines properly - number of newlines + 1 (if there's content)
+    // Count lines properly - only count actual newlines entered by user
     const newlineCount = (text.match(/\n/g) || []).length;
-    const lines = text.trim() ? newlineCount + 1 : newlineCount;
+    // If there's text and at least one newline, we have newlineCount+1 lines
+    // If there's text but no newlines, we have 1 line
+    // If there's no text, we have 0 lines
+    const lines = text.trim() ? (newlineCount) : 0;
     
     // Count special symbols properly
     const specialSymbols = (text.match(/[^\w\s]/g) || []).length;
+    
+    console.log(`Text analysis - Newlines found: ${newlineCount}, Total lines: ${lines}`);
     
     return {
         letters: letters,
