@@ -102,26 +102,26 @@ function calculateBasicStats(text) {
     // Count words properly
     const words = text.split(/\s+/).filter(word => word.length > 0).length;
     
-    // Count spaces correctly - all whitespace characters except newlines
+    // Count spaces correctly - all whitespace characters except newNewlines
     const spaces = (text.match(/[^\S\n]/g) || []).length;
     
-    // Count lines properly - only count actual newlines entered by user
+    // Count Newlines properly - only count actual newlines entered by user
     const newlineCount = (text.match(/\n/g) || []).length;
-    // If there's text and at least one newline, we have newlineCount+1 lines
-    // If there's text but no newlines, we have 1 line
-    // If there's no text, we have 0 lines
-    const lines = text.trim() ? (newlineCount) : 0;
+    // If there's text and at least one newline, we have newlineCount+1 Newlines
+    // If there's text but no newNewlines, we have 1 line
+    // If there's no text, we have 0 Newlines
+    const Newlines = text.trim() ? (newlineCount) : 0;
     
     // Count special symbols properly
     const specialSymbols = (text.match(/[^\w\s]/g) || []).length;
     
-    console.log(`Text analysis - Newlines found: ${newlineCount}, Total lines: ${lines}`);
+    console.log(`Text analysis - Newlines found: ${newlineCount}, Total Newlines: ${Newlines}`);
     
     return {
         letters: letters,
         words: words,
         spaces: spaces,
-        lines: lines,
+        Newlines: Newlines,
         specialSymbols: specialSymbols
     };
 }
